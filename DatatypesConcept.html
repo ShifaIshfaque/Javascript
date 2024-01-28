@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DataTypes</title>
 </head>
 
 <body>
@@ -46,6 +46,33 @@
     }
 
     console.log(typeof bigNumber);
+
+    //  ************** Stack and Heap ****************//
+
+    // Stack (Primitive) , Heap (Non-Primitive)
+    //Stack (it returns Copy)
+    let likndIn = "ShifaIshfaque"
+
+    let newName = likndIn
+    newName = "AdanBatool"
+
+    console.log(likndIn);
+    console.log(newName);
+
+
+    //Heap (it returns reference "updates or any changes will commit in original value only")
+
+    let stdOne = {
+        email: "shifa@gmail.com",
+        age: 21
+    }
+
+    let stdTwo = stdOne
+
+    stdTwo.email = "arain@gmail.com"
+
+    console.log(stdOne.email)
+    console.log(stdTwo.email)
 
 </script>
 
