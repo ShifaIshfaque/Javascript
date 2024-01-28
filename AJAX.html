@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+    <script>
+        // Function to fetch data asynchronously
+        function fetchData() {
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Define what happens when the response is loaded
+            xhr.onload = function () {
+                // Check if the request was successful
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Update the content of an element with the received data
+                    document.getElementById('output').innerText = xhr.responseText;
+                } else {
+                    // Handle errors
+                    console.error('Request failed with status ' + xhr.status);
+                }
+            };
+
+            // Open a GET request to the server
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+
+            // Send the request
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Button to trigger the AJAX request -->
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <!-- Placeholder to display the response -->
+    <div id="output">Data will appear here...</div>
+</body>
+
+</html>

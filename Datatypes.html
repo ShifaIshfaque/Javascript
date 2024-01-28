@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //hosited datatypes in let
+    <script>
+        function example() {
+            console.log(z);  // Outputs: undefined
+            if (true) {
+                let z = 42;
+            }
+            console.log(z);  // Outputs: undefined
+        }
+
+        example();
+
+    </script>
+
+    <script>
+        function example() {
+            console.log(w);  // ReferenceError: w is not defined
+            if (true) {
+                const w = 42;
+            }
+            console.log(w);  // ReferenceError: w is not defined
+        }
+
+        example();
+
+    </script>
+
+
+</body>
+
+</html>

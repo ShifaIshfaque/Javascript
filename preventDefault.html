@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preventing Default Behavior</title>
+</head>
+
+<body>
+
+    <!-- A simple form with a submit button -->
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Get the form element by its ID
+        const form = document.getElementById('myForm');
+
+        // Event listener for the 'submit' event
+        form.addEventListener('submit', function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Custom form submission logic
+            const username = document.getElementById('username').value;
+
+            console.log('Submitted username:', username);
+        });
+    </script>
+
+</body>
+
+</html>

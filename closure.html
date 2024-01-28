@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black; color: bisque;">
+    <button id="color">Color change</button>
+</body>
+<script>
+    // Define an array of colors
+    var colors = ['orange', 'green', 'blue', 'red', 'yellow'];
+
+    // Define the clickHandler function
+    function clickHandler() {
+        var index = 0; // Start with the first color
+        return function () {
+            // Change the background color to the current color
+            document.body.style.backgroundColor = colors[index];
+            // Move to the next color
+            index = (index + 1) % colors.length;
+        }
+    }
+
+    // Assign the click handler to the button
+    document.getElementById("color").onclick = clickHandler();
+</script>
+
+</html>

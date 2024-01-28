@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Target and Object</title>
+</head>
+
+<body>
+
+    <button id="myButton">Click me</button>
+
+    <script>
+        // Get the button element by its ID
+        const button = document.getElementById('myButton');
+
+        // Event listener for the 'click' event
+        button.addEventListener('click', function (event) {
+            // Accessing properties of the event object
+            console.log('Event type:', event.type);
+            console.log('Target element:', event.target);
+
+            // Additional action (e.g., changing the button text)
+            event.target.innerText = 'Clicked!';
+        });
+    </script>
+
+</body>
+
+</html>
