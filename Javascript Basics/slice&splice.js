@@ -24,4 +24,4 @@ const mynewArr2 = myArr.splice(1,3)
 console.log(mynewArr2)
 console.log("B", myArr)
 
-in splice it affects the original array and ...it manipulate the original array
+// in splice it affects the original array and ...it manipulate the original array
