@@ -20,8 +20,8 @@ console.log(real_another_array);
 
 
 
-console.log(Array.isArray("Hitesh"))
-console.log(Array.from("Hitesh"))
+console.log(Array.isArray("Hitesh"))//is Array no output False
+console.log(Array.from("Hitesh"))//convert this string to array
 console.log(Array.from({name: "hitesh"})) // interesting
 
 let score1 = 100
