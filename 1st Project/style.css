@@ -1,0 +1,15 @@
+
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+#changeColorButton {
+    width: 200px;
+    height: 50px;
+    border: solid rgb(124, 112, 112) 2px;
+   
+  }
+  
+  
